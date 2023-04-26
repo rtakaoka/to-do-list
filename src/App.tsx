@@ -10,7 +10,7 @@ function App() {
   }
 
   const createTask = (title: string) => {
-    const id = (Math.trunc(Math.random() * 1000)).toString()
+    const id = crypto.randomUUID()
     setTaskList([...taskList, { id, title }])
     setTaskTitle('')
   }
